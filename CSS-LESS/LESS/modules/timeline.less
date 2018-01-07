@@ -1,0 +1,62 @@
+
+
+.timeline {
+	li {
+		.timeline-badge {
+			background-color: #fff;
+			border: 1px solid #ccc;
+			color: #ccc;
+
+			&.full {
+				top: -25px;
+			}
+		}
+
+		.timeline-panel {
+			&.full {
+				width: 100%;
+				z-index: 2;
+				background-color: #fff;
+				&:before, &:after {
+					display: none;
+				}
+			}
+		}
+		&:hover {
+			.timeline-panel {
+				border-color: @infoColor;
+				&:before {
+					border-left-color: @infoColor;
+					border-right-color: @infoColor;
+				}
+			}
+			.timeline-badge {
+				border: 1px solid @infoColor;
+				color: @infoColor;
+			}
+		}
+
+		
+		.timeline-image {
+			display: inline-block;
+			border: 1px solid #efefef;
+			padding: 2px;
+			cursor: pointer;
+
+			&:hover {
+				border-color: @warningColor;
+			} 
+		}
+
+		.was-at {
+			i {
+				color: @warningColor;
+			}
+			.well {
+				padding: @spacing;
+				background-color: #fff;
+				margin-bottom: 0;
+			}
+		}
+	}
+}

@@ -1,0 +1,313 @@
+
+
+.panel {
+	.rounded(0px);
+	/*border-color: 1px solid #efefef;*/
+	box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.14);
+	.panel-heading {
+		&:after {
+			clear: both;
+		}
+		font-size: 14px;
+		/*font-weight: 600;*/
+		font-family: "Source Sans Pro", sans-serif;
+		text-transform: uppercase;
+
+		.panel-menu
+		{
+			.dropdown {
+				display: inline-block;
+			}
+		}
+
+		&.panel-primary {
+			background-color: @primaryColor;
+			color: #fff;
+			.panel-menu > .dropdown-menu {
+				border-top-color: darken(@primaryColor, 20%);
+				&:after {
+					border-bottom-color: darken(@primaryColor, 20%);
+				}
+
+			}
+		}
+		&.panel-success {
+			background-color: @successColor;
+			color: #fff;
+			.panel-menu > .dropdown-menu {
+				border-top-color: darken(@successColor, 20%);
+				&:after {
+					border-bottom-color: darken(@successColor, 20%);
+				}
+
+			}
+		}
+		&.panel-info {
+			background-color: @infoColor;
+			color: #fff;
+			.panel-menu > .dropdown-menu {
+				border-top-color: darken(@infoColor, 20%);
+				&:after {
+					border-bottom-color: darken(@infoColor, 20%);
+				}
+
+			}
+		}
+		&.panel-warning {
+			background-color: @warningColor;
+			color: #fff;
+			.panel-menu > .dropdown-menu {
+				border-top-color: darken(@warningColor, 20%);
+				&:after {
+					border-bottom-color: darken(@warningColor, 20%);
+				}
+
+			}
+		}
+		&.panel-danger {
+			background-color: @dangerColor;
+			color: #fff;
+			.panel-menu > .dropdown-menu {
+				border-top-color: darken(@dangerColor, 20%);
+				&:after {
+					border-bottom-color: darken(@dangerColor, 20%);
+				}
+
+			}
+		}
+
+		h3.panel-title {
+			/*float: left;*/
+
+			display: inline-block;
+			font-size: 16px;
+			margin-top: 0px;
+			margin-bottom: 0px;
+		}
+	}
+
+	.panel-footer {
+		border-top: none;
+		background-color: #fff;
+		text-transform: uppercase;
+		font-size: 11px;
+		letter-spacing: 1px;
+	}
+
+	&.panel-icon {
+		i {
+			width: 20px;
+			font-size: 16px;
+		}
+	}
+
+	&.panel-default {
+		border: 1px solid #efefef;
+		.panel-heading {
+			color: #606060;
+			background-color: #fff;
+			border-bottom: 1px solid #efefef;
+		}
+	}
+
+	&.panel-info {
+		border: 1px solid #efefef;
+		.panel-heading {
+			background-color: @infoBgColor;
+			border-bottom: 2px solid darken(@infoBgColor,20%);
+			color: #fff;
+		}
+	}
+
+	&.panel-primary {
+		border: 1px solid #efefef;
+		.panel-heading {
+			background-color: @primaryBgColor;
+			border-bottom: 2px solid darken(@primaryBgColor,20%);
+			color: #fff;
+		}
+	}
+
+	&.panel-success {
+		border: 1px solid #efefef;
+		.panel-heading {
+			background-color: @successBgColor;
+			border-bottom: 2px solid darken(@successBgColor,20%);
+			color: #fff;
+		}
+	}
+
+	&.panel-warning {
+		border: 1px solid #efefef;
+		.panel-heading {
+			background-color: @warningBgColor;
+			border-bottom: 2px solid darken(@warningBgColor,20%);
+			color: #fff;
+		}
+	}
+
+	&.panel-danger {
+		border: 1px solid #efefef;
+		.panel-heading {
+			background-color: @dangerBgColor;
+			border-bottom: 2px solid darken(@dangerBgColor,20%);
+			color: #fff;
+		}
+	}
+	
+
+	/* Panel Menu */
+	.panel-menu {
+		float: right;
+		right: 30px;
+		top: 8px;
+		font-weight: 100;
+
+		/* Dropdown Menu Inside the Panel Menu */
+		.dropdown-menu {
+			right: 0;
+			left: auto;
+			.rounded(5px) !important;
+			border: 1px solid #e5e5e5;
+			border-top: 2px solid @infoColor;
+			font-size: 12px;
+
+			.divider {
+				margin: 5px 0px; 
+			}
+			
+			li a {
+				color: #5e656b;
+				padding: 5px 10px;
+				i {
+					color: #5e656b;
+					margin-right: 5px;
+				}
+				&:hover {
+					color: #fff;
+					i { color: #fff };
+					background-color: #e5e5e5 !important;
+				}
+			}
+		}
+	}
+
+	/* Panel Blockquote */
+	&.panel-blockquote {
+		/* Border Primary */
+		&.panel-border-primary {
+			/* Left Border Styled */
+			&.left {
+				border-left: 3px solid @primaryColor;
+			}
+			/* Left Right Styled */
+			&.right {
+				border-right: 3px solid @primaryColor;
+			}
+			/* Left Top Styled */
+			&.top {
+				border-top: 3px solid @primaryColor;
+			}
+			/* Left Bottom Styled */
+			&.bottom {
+				border-bottom: 3px solid @primaryColor;
+			}
+		}
+		/* Border Info */
+		&.panel-border-info {
+			/* Left Border Styled */
+			&.left {
+				border-left: 3px solid @infoColor;
+			}
+			/* Left Right Styled */
+			&.right {
+				border-right: 3px solid @infoColor;
+			}
+			/* Left Top Styled */
+			&.top {
+				border-top: 3px solid @infoColor;
+			}
+			/* Left Bottom Styled */
+			&.bottom {
+				border-bottom: 3px solid @infoColor;
+			}
+
+		}
+		/* Border Success */
+		&.panel-border-success {
+			/* Left Border Styled */
+			&.left {
+				border-left: 3px solid @successColor;
+			}
+			/* Left Right Styled */
+			&.right {
+				border-right: 3px solid @successColor;
+			}
+			/* Left Top Styled */
+			&.top {
+				border-top: 3px solid @successColor;
+			}
+			/* Left Bottom Styled */
+			&.bottom {
+				border-bottom: 3px solid @successColor;
+			}
+		}
+		/* Border Warning */
+		&.panel-border-warning {
+			/* Left Border Styled */
+			&.left {
+				border-left: 3px solid @warningColor;
+			}
+			/* Left Right Styled */
+			&.right {
+				border-right: 3px solid @warningColor;
+			}
+			/* Left Top Styled */
+			&.top {
+				border-top: 3px solid @warningColor;
+			}
+			/* Left Bottom Styled */
+			&.bottom {
+				border-bottom: 3px solid @warningColor;
+			}
+		}
+		/* Border Danger */
+		&.panel-border-danger {
+			/* Left Border Styled */
+			&.left {
+				border-left: 3px solid @dangerColor;
+			}
+			/* Left Right Styled */
+			&.right {
+				border-right: 3px solid @dangerColor;
+			}
+			/* Left Top Styled */
+			&.top {
+				border-top: 3px solid @dangerColor;
+			}
+			/* Left Bottom Styled */
+			&.bottom {
+				border-bottom: 3px solid @dangerColor;
+			}
+		}
+	}
+
+	/* Panel Rounded */
+	&.panel-rounded {
+		.rounded(10px);
+		.panel-heading {
+			-webkit-border-top-left-radius: 10px;
+					border-top-left-radius: 10px;
+			-webkit-border-top-right-radius: 10px;
+					border-top-right-radius: 10px;
+		}
+	}
+
+	/* Panel Square */
+	&.panel-square {
+		.rounded(0px);
+		.panel-heading {
+			.rounded(0px);
+		}
+	}
+}

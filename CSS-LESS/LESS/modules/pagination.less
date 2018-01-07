@@ -1,0 +1,31 @@
+
+
+// Pagination
+// --------------------------------------------------
+.pagination, .pager {
+    .rounded(0px);
+
+    li a {
+        border: 1px solid #fff;
+        color: #666;
+        background-color: #efefef;
+        &:hover {
+            background-color: lighten(@navigationBgColor, 5%);
+            color: #fff;
+        }
+    }
+    li:first-child a, li:last-child a {
+        .rounded(0px);
+    }
+    li.active a {
+        font-weight: bold;
+        background-color: @navigationBgColor;
+        border: 1px solid @navigationBgColor;
+        border-top: 1px solid darken(@navigationBgColor, 10%);
+        color: #fff;
+        &:hover, &:focus {
+            background-color: @navigationBgColor;
+            border: 1px solid @navigationBgColor;
+        }
+    }
+}

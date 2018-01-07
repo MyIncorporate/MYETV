@@ -1,0 +1,28 @@
+
+
+#accordion {
+	.panel {
+		.rounded(0px);
+		+.panel {
+			margin-top: 0;
+		}
+		border-bottom: none;
+	}
+	.panel-heading {
+		background-color: #fff;
+		border-bottom: 1px solid @infoColor;
+		
+		&:hover {
+			background-color: #f5f5f5;
+		}
+		.panel-title a {
+			font-size: 12px;
+			font-weight: 600;
+			display: block;
+			color: #858585;
+			&:hover {
+				text-decoration: none;
+			}
+		}
+	}
+}

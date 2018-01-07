@@ -1,0 +1,173 @@
+
+.carousel {
+    &.normal {
+        width: 500px;
+    }
+    .carousel-control {
+        .fa {
+            &.fa-chevron-left, &.fa-chevron-right {
+                position: absolute;
+                top: 20%;
+                display: inline-block;
+            }
+            &.fa-chevron-left {
+                left: 50%;
+            }
+            &.fa-chevron-right {
+                left: 50%;
+            }
+        }
+    }
+
+    &.advanced {
+        margin-bottom: 20px;
+        .carousel-caption {
+            background-color: #333;
+            border-top: 1px solid #ccc;
+            opacity: 0.7;
+            right: 0;
+            left: 0;
+            bottom: 0;
+            text-align: left;
+            padding: @spacing;
+        }
+        .carousel-indicators {
+            margin-left: 0;
+            bottom: -35px;
+            left: 0;
+            width: 100%;
+            text-align: right;
+            li {
+                .rounded(0px);
+                border: 1px solid #ccc;
+                &:hover {
+                    background-color: #ccc;
+                    border: 1px solid #aaa;
+                }
+                &.active {
+                    background-color: #ccc;
+                    border: 1px solid #aaa;
+                    width: 14px;
+                    height: 14px;
+                }
+            }
+        }
+    }
+}
+
+#quote-carousel 
+{
+  padding: 0 10px 30px 10px;
+  margin-top: 30px;
+
+    /* Control buttons  */
+    .carousel-control {
+      background: none;
+      color: #222;
+      font-size: 2.3em;
+      text-shadow: none;
+      margin-top: 30px;
+
+      /* Previous button  */
+      &.left {
+        left: -12px;
+      }
+      /* Next button  */
+      &.right {
+        right: -12px !important;
+      }
+      
+    }
+
+    /* Changes the position of the indicators */
+    .carousel-indicators 
+    {
+      right: 50%;
+      top: auto;
+      bottom: 0px;
+      margin-right: -19px;
+    }
+    /* Changes the color of the indicators */
+    .carousel-indicators li 
+    {
+      background: #c0c0c0;
+    }
+
+    img
+    {
+      width: 250px;
+      height: 100px
+    }
+}
+
+.item blockquote {
+    border-left: none; 
+    margin: 0;
+}
+
+.item blockquote img {
+    margin-bottom: 10px;
+}
+
+.item blockquote p:before {
+    content: "\f10d";
+    font-family: 'Fontawesome';
+    float: left;
+    margin-right: 10px;
+}
+
+
+
+/**
+  MEDIA QUERIES
+*/
+
+/* Small devices (tablets, 768px and up) */
+@media (min-width: 768px) { 
+    #quote-carousel 
+    {
+      margin-bottom: 0;
+      padding: 0 40px 30px 40px;
+    }
+    
+}
+
+/* Small devices (tablets, up to 768px) */
+@media (max-width: 768px) { 
+    
+    /* Make the indicators larger for easier clicking with fingers/thumb on mobile */
+    
+    #quote-carousel .carousel-indicators {
+        bottom: -20px !important;  
+        li {
+            display: inline-block;
+            margin: 0px 5px;
+            width: 15px;
+            height: 15px;
+        
+            &.active {
+                margin: 0px 5px;
+                width: 20px;
+                height: 20px;
+            }
+        }
+    }
+}
+
+#myCarousel {
+    .nav {
+        background: #eee;
+
+        a small {
+          display: block;  
+        }
+    }
+    .nav-justified > li > a
+    {
+        border-radius: 0px !important;
+    }
+    .nav-pills>li[data-slide-to="0"].active a { background-color: #16a085 !important; }
+    .nav-pills>li[data-slide-to="1"].active a { background-color: #e67e22; }
+    .nav-pills>li[data-slide-to="2"].active a { background-color: #2980b9; }
+    .nav-pills>li[data-slide-to="3"].active a { background-color: #8e44ad; }
+}

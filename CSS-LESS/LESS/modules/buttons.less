@@ -1,0 +1,198 @@
+
+// Buttons
+// =========================================================
+
+.btn {
+	-webkit-border-radius: 0;
+	-moz-border-radius: 0;
+	border-radius: 0;
+
+	/* Button w/ Action */
+	&.btn-action {
+		border: none !important;
+		outline: 0;
+		color: darken(#aaa,15%) !important;
+		font-weight: 100;
+		&:hover,
+		&:active,
+		&:visited,
+		&:focus {
+			color: #fff !important;
+			background-color: @inverseColor !important;
+		}
+		&.btn-warning {
+			background-color: #fff;
+			&:hover,
+			&:active,
+			&:visited,
+			&:focus {
+				background-color: @dangerColor !important;
+				color: #fff !important;
+			}
+		}
+	}
+	/* End Button w/ Action */
+
+	&.btn-outline {
+		&:hover {
+			&.btn-primary {
+				background-color: #fff;
+				border: 1px solid @primaryColor;
+				color: @primaryColor;
+			}
+			&.btn-success {
+				background-color: #fff;
+				border: 1px solid @successColor;
+				color: @successColor;
+			}
+			&.btn-danger {
+				background-color: #fff;
+				border: 1px solid @dangerColor;
+				color: @dangerColor;
+			}
+			&.btn-warning {
+				background-color: #fff;
+				border: 1px solid @warningColor;
+				color: @warningColor;
+			}
+			&.btn-info {
+				background-color: #fff;
+				border: 1px solid @infoColor;
+				color: @infoColor;
+			}
+			&.btn-inverse {
+				background-color: #fff;
+				border: 1px solid @inverseColor;
+				color: @inverseColor;
+			}
+		}
+	}
+
+	&.btn-circle {
+		.rounded(15px);
+		width: 30px;
+		height: 30px;
+		text-align: center;
+		padding: 6px 0;
+		font-size: 12px;
+		&.btn-lg {
+			.rounded(25px); 
+			width: 50px; 
+			height: 50px;
+			padding: 10px 16px;
+			font-size: 18px;
+		}
+		&.btn-xl {
+			.rounded(35px); 
+			width: 70px; 
+			height: 70px; 
+			padding: 10px 16px;
+			font-size: 24px;
+		}
+	}
+
+	&.btn-social {
+		text-align: left;
+		position: relative;
+		strong {
+			font-size: 14px;
+		}
+		i {
+			width: 30px;
+			border-right: 1px solid #fff;
+			text-align: center;
+			margin-right: 5px;
+			font-size: 18px;
+		}
+	}
+
+	&.btn-social-icon {
+		i { font-size: 18px; }
+	}
+
+	&.btn-default {
+		background-color: #fff;
+		color: #333;
+		border: 1px solid #efefef;
+		&:hover {
+			background-color: #efefef;
+		}
+	}
+
+	&.btn-primary {
+		background-color: @primaryBgColor;
+		border-color: @primaryBgColor;
+		&:hover {
+			background-color: @primaryBgColorHover;
+		}
+	}
+
+	&.btn-info {
+		background-color: @infoBgColor;
+		border-color: @infoBgColor;
+		&:hover {
+			background-color: @infoBgColorHover;
+		}
+	}
+
+	&.btn-success {
+		background-color: @successBgColor;
+		border-color: @successBgColor;
+		&:hover {
+			background-color: @successBgColorHover;
+		}
+	}
+
+	&.btn-warning {
+		background-color: @warningBgColor;
+		border-color: @warningBgColor;
+		&:hover {
+			background-color: @warningBgColorHover;
+		}
+	}
+
+	&.btn-danger {
+		background-color: @dangerBgColor;
+		border-color: @dangerBgColor;
+		&:hover {
+			background-color: @dangerBgColorHover;
+		}
+	}
+
+	&.btn-inverse {
+		color: #fff;
+		background-color: @inverseBgColor;
+		border-color: @inverseBgColor;
+		&:hover {
+			background-color: @inverseBgColorHover;
+		}
+	}
+}
+
+.btn-group {
+
+	&.btn-group-xs {
+		i { font-size: 13px; }
+	}
+	.btn {
+		.rounded(0px);
+	}
+
+	&.open {
+		.btn-primary.dropdown-toggle {
+			background-color: @primaryBgColorHover;
+		}
+		.btn-info.dropdown-toggle {
+			background-color: @infoBgColorHover;
+		}
+		.btn-success.dropdown-toggle {
+			background-color: @successBgColorHover;
+		}
+		.btn-warning.dropdown-toggle {
+			background-color: @warningBgColorHover;
+		}
+		.btn-danger.dropdown-toggle {
+			background-color: @dangerBgColorHover;
+		}
+	}
+}

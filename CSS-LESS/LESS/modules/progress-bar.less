@@ -1,0 +1,26 @@
+
+// Progress Bars
+// ------------------------------------------
+
+.progress {
+	-webkit-border-radius: 0;
+	-moz-border-radius: 0;
+	border-radius: 0;
+	
+	&.progress-bar-mini { height: 5px; }
+
+	.progress-bar {
+		background-color: #efefef;
+		border-left: 4px solid darken(#efefef, 20%);
+		border-bottom: none;
+
+		&.progress-bar-primary { background-color: @primaryBgColor; border-left: 4px solid darken(@primaryBgColor, 20%); }
+		&.progress-bar-info { background-color: @infoBgColor; border-left: 4px solid darken(@infoBgColor, 20%); }
+		&.progress-bar-success { background-color: @successBgColor; border-left: 4px solid darken(@successBgColor, 20%); }
+		&.progress-bar-warning { background-color: @warningBgColor; border-left: 4px solid darken(@warningBgColor, 20%); }
+		&.progress-bar-danger { background-color: @dangerBgColor; border-left: 4px solid darken(@dangerBgColor, 20%); }
+
+		
+	}
+}
+

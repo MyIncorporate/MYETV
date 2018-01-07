@@ -1,0 +1,33 @@
+
+
+.mail {
+	table {
+		margin-bottom: 0px;
+		tr {
+			&.mail-unread {
+				td { font-weight: bold; }
+			}
+			&.mail-highlight {
+				td { background-color: lighten(@warningColor, 35%); }
+			}
+		}
+		td {
+			border-top: none;
+			border-bottom: 1px solid #efefef;
+			padding: 10px 5px !important;
+			.fa-star {
+				color: #ddd;
+				font-size: 14px;
+				&.starred {
+					color: #e97436;
+				}
+			}
+			.btn-link {
+				color: #23bab5;
+			}
+		}
+		tr:last-child {
+			td { border: none; }
+		}
+	}	
+}

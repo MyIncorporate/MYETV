@@ -1,0 +1,146 @@
+
+
+.sidebar-right {
+	display: none;
+	&.open {
+		display: block;
+		position: fixed;
+		z-index: 1001;
+		max-width: 330px;
+		background-color: @primaryBgColor;
+		right: 0px;
+		top: 0px;
+		height: 100%;
+
+		.sidebar-title {
+			color: #999;
+			text-transform: uppercase;
+			padding: 5px 0px;
+			font-size: 11px;
+		}
+
+		.nav {
+			&.nav-tabs {
+				border-bottom: none;
+				li {
+					a {
+						margin-right: 0px !important;
+						background-color: @primaryBgColor;
+						border: none;
+						cursor: pointer;
+						&:hover {
+							background-color: darken(@primaryBgColor, 10%);
+							color: #fff;
+						}
+						color: #bbbabe;
+					}
+					&.active {
+						a {
+							background-color: darken(@primaryBgColor, 10%);
+							color: #fff;
+						}
+					}
+				}
+			}
+		}
+		.sidebar-right-search {
+			input {
+				font-size: 12px;
+				background-color: darken(@primaryBgColor, 10%);
+				color: #bbbabe;
+				border: none;
+				height: 30px;
+			}
+			.btn {
+				font-size: 12px;
+				background-color: darken(@primaryBgColor, 10%);
+				color: #bbbabe;
+				height: 30px;
+				border: none;
+				border-left: 2px solid darken(@primaryBgColor, 20%);
+			}
+		}
+		.chat-list {
+			list-style: none;
+			margin-left: -10px;
+			margin-right: -10px;
+			margin-bottom: 0px;
+			background-color: #fff;
+			padding: 0px;
+			li {
+				position: relative;
+				padding: 0px 0px;
+				a {
+					&:hover,
+					&:focus,
+					&:active,
+					&:visited
+					{
+						text-decoration: none;
+					}
+				}
+				span {
+					display: block;
+					&.time {
+						position: absolute;
+						top: 5px;
+						right: 10px;
+						color: #888;
+						font-size: 10px;
+					}
+					&.name {
+						font-family: "Lato", sans-serif;
+						font-size: 14px;
+						font-weight: 600;
+						color: #444;
+					}
+					&.message {
+						font-family: "Lato", sans-serif;
+						font-size: 12px;
+						color: #888;
+					}
+				}
+				img {
+					&.success { border-right: 6px solid @successColor; }
+					&.primary { border-right: 6px solid darken(@primaryColor, 20%); }
+					&.info { border-right: 6px solid @infoColor; }
+					&.warning { border-right: 6px solid @warningColor; }
+					&.danger { border-right: 6px solid @dangerColor; }
+					width: 56px;
+					height: 50px;
+				}
+				.media-body
+				{
+					padding: 5px;
+				}
+				.label {
+					float: right;
+					z-index: 2;
+				}
+				&:hover {
+					color: #fff;
+				}
+			}
+		}
+
+		.tab-pane {
+			padding-bottom: 0px;
+			padding-top: 0px;
+		}
+
+		.inbox-list {
+			color: #aaabae;
+			list-style: none;
+			padding: 0px;
+			li {
+				cursor: pointer;
+				border-top: 1px dotted #aaabae;
+				padding: @spacing 0px;
+				strong, span { display: block; }
+				&:hover {
+					color: #fff;
+				}
+			}
+		}
+	}
+}

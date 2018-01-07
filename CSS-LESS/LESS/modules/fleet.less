@@ -1,0 +1,244 @@
+
+
+/* Fleet Management Related Styles */
+
+/* Content */
+.fleet-view {
+	padding: 0px;
+	padding-right: 15px;
+}
+.fleet-content {
+	padding-left: 0;
+	padding-right: 0;
+	margin-top: -5px;
+	.breadcrumb {
+		margin-bottom: 0px;
+	}
+
+	.emphasis {
+		font-size: 22px;
+		color: @warningColor;
+	}
+
+	.fleet-issues {
+		h1 {
+			display: block;
+			font-size: 28px;
+			&.success {
+				color: @successColor;
+			}
+			&.danger {
+				color: @dangerColor;
+			}
+			&.warning {
+				color: @warningColor;
+			}
+			&.primary {
+				color: @primaryColor;
+			}
+			&.info {
+				color: @infoColor;
+			}
+		}
+		.caption {
+			text-transform: uppercase;
+			font-size: 10px;
+			color: #888;
+		}
+	}
+
+	.fleet-comments {
+		img {
+			border: 1px solid #ccc;
+			padding: 3px;
+		}
+		.comment-body {
+			background-color: #e5e5e5;
+			.rounded(3px);
+			margin-left: 70px;
+			padding: 3px;
+			position: relative;
+			&:before {
+				content: "";
+				display: block;
+				height: 0;
+				width: 0;
+				border: 6px solid #e5e5e5;
+				border-width: 6px 6px 6px 0;
+				border-color: transparent #e5e5e5 transparent transparent;
+				position: absolute;
+				left: -6px;
+				top: 22px;
+			}
+
+			.comment-inner {
+				background-color: #fff;
+				border: 1px solid #ccc;
+				.rounded(3px);
+				padding: 9px 15px 0;
+
+			}
+		}
+	}
+
+	.fleet-panel {
+		min-height: 1300px;
+		margin-bottom: 0px;
+		background-color: #efefef;
+	}
+
+
+
+	.media {
+		margin-bottom: 5px;
+		&.media-info {
+			.media-object {
+				&.fleet-icon {
+					background-color: lighten(@infoColor, 20%);
+					border: 1px solid @infoColor;
+				}
+			}
+		}
+
+		&.media-primary {
+			.media-object {
+				&.fleet-icon {
+					background-color: lighten(@primaryColor, 20%);
+					border: 1px solid @primaryColor;
+				}
+			}
+		}
+
+		&.media-success {
+			.media-object {
+				&.fleet-icon {
+					background-color: lighten(@successColor, 20%);
+					border: 1px solid @successColor;
+				}
+			}
+		}
+
+		&.media-danger {
+			.media-object {
+				&.fleet-icon {
+					background-color: lighten(@dangerColor, 20%);
+					border: 1px solid @dangerColor;
+				}
+			}
+		}
+
+		&.media-warning {
+			.media-object {
+				&.fleet-icon {
+					background-color: lighten(@warningColor, 20%);
+					border: 1px solid @warningColor;
+				}
+			}
+		}
+
+		.media-heading {
+			font-size: 14px;
+			font-weight: 800;
+			margin-bottom: 0px;
+		}
+
+		.caption {
+			color: #888;
+		}
+
+		.media-object {
+			&.fleet-icon {
+				width: 32px;
+				height: 32px;
+				.rounded(3px);
+				text-align: center;
+				color: #fff;
+				line-height: 32px;
+				i {
+					font-size: 16px;
+				}
+			}
+		}
+	}
+
+	.done-true {
+		text-decoration: line-through;
+		color: #ddd;
+	}
+
+	h1 {
+		padding: 0;
+		margin: 0;
+		display: inline;
+		font-size: 22px;
+		i {
+			color: #666;
+		}
+	}
+
+	.fleet-quick-btn-group {
+		max-width: 300px;
+	}
+}
+.fleet-sidebar {
+	/*padding-left: 0;*/
+	padding-right: 0;
+	.fleet-panel {
+		min-height: 1335px;
+		margin-bottom: 0px;
+	}
+}
+/* Stats style */
+.fleet-stats {
+	padding-left: 0;
+	margin-left: 0;
+	list-style: none; 
+	li {
+		padding: 4px 0px;
+		i {
+			width: 20px;
+			font-size: 16px;
+			text-align: center;
+		}
+	}
+}
+
+/* car profile image style */
+.fleet-img img {
+	border: 1px solid #ccc;
+	padding: 3px;
+	border-bottom: 3px solid #ccc;
+	border-right: 2px solid #ccc;
+	cursor: pointer;
+}
+
+/* Car quick add menus */
+.fleet-quick {
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+/* Dashboard Charts */
+#latest-meter-readings {
+	display: block;
+	height: 300px;
+}
+#fuel-costs {
+	display: block;
+	height: 150px;
+}
+#service-costs {
+	display: block;
+	height: 150px;
+}
+#bar_tooltip { 
+	font-size: 13px; 
+	position: absolute; 
+	display: none; 
+	padding: 2px; 
+	border: 2px solid; 
+	-webkit-border-radius: 5px; 
+			border-radius: 5px; 
+	background-color: #FFF; 
+	opacity: 0.8; 
+}

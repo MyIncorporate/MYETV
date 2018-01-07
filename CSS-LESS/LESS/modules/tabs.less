@@ -1,0 +1,70 @@
+
+
+.tabs {
+	background-color: #fff;
+	&.tabs-bordered {
+		.nav-tabs {
+			li {
+				border-right: 1px solid #efefef;
+			}
+		}
+	}
+
+	&.tabs-icons {
+		.nav-tabs {
+			li {
+				a {
+					i {
+						margin-right: 5px;
+					}
+					&:hover {
+						i {
+							color: @infoColor;
+						}
+					}
+				}
+				&.active {
+					a {
+						i {
+							color: @infoColor;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	.nav-tabs {
+		border: 1px solid #efefef;
+		li {
+			a {
+				.rounded(0px);
+				margin-right: 0;
+				color: #333;
+				padding: 10px 20px; 
+				&:hover {
+					background-color: #fff;
+					border: 1px solid transparent;
+					border-bottom: 2px solid @infoColor;
+				}
+			}
+
+			&.active {
+				a {
+					border: 1px solid transparent;
+					border-bottom: 2px solid @infoColor;
+					&:hover {
+						border: 1px solid transparent;
+						border-bottom: 2px solid @infoColor;
+					}
+				}
+			}
+		}
+	}
+
+	.tab-pane {
+		border: 1px solid #efefef;
+		border-top: none;
+		padding: @spacing;
+	}
+}
